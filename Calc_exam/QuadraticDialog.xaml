@@ -1,0 +1,76 @@
+﻿<Window x:Class="Calculator.QuadraticDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Решение квадратного уравнения" 
+        Height="350" Width="453"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="#34495E"
+        Foreground="White"
+        Topmost="True"
+        WindowStyle="ToolWindow">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Введите коэффициенты уравнения:" 
+                   FontSize="14" FontWeight="Bold" Margin="0,0,0,15" 
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1" Text="a*x² + b*x + c = 0" 
+                   FontSize="16" FontStyle="Italic" Margin="0,0,0,15" 
+                   HorizontalAlignment="Center" Foreground="#E67E22"/>
+
+        <Grid Grid.Row="2" Margin="0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="a:" FontSize="16" FontWeight="Bold" 
+                       VerticalAlignment="Center" Margin="0,0,10,0" Width="30"/>
+            <TextBox x:Name="TextBoxA" Grid.Column="1" Text="1" 
+                     Background="White" Foreground="Black" 
+                     Height="30" FontSize="14" Padding="5"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="b:" FontSize="16" FontWeight="Bold" 
+                       VerticalAlignment="Center" Margin="0,0,10,0" Width="30"/>
+            <TextBox x:Name="TextBoxB" Grid.Column="1" Text="0" 
+                     Background="White" Foreground="Black" 
+                     Height="30" FontSize="14" Padding="5"/>
+        </Grid>
+
+        <Grid Grid.Row="4" Margin="0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="c:" FontSize="16" FontWeight="Bold" 
+                       VerticalAlignment="Center" Margin="0,0,10,0" Width="30"/>
+            <TextBox x:Name="TextBoxC" Grid.Column="1" Text="0" 
+                     Background="White" Foreground="Black" 
+                     Height="30" FontSize="14" Padding="5"/>
+        </Grid>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="Вычислить" Width="100" Height="35" 
+                    Click="OK_Click" Background="#27AE60" Foreground="White" 
+                    Cursor="Hand" FontSize="14" FontWeight="Bold"/>
+            <Button Content="Отмена" Width="100" Height="35" Margin="5" 
+                    Click="Cancel_Click" Background="#E74C3C" Foreground="White" 
+                    Cursor="Hand" FontSize="14" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
