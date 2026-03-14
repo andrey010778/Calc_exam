@@ -16,7 +16,7 @@ namespace Calculator
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            // Проверка ввода
+            
             if (!double.TryParse(TextBoxA.Text, out double a))
             {
                 MessageBox.Show("Введите корректное число для коэффициента a", "Ошибка ввода");
